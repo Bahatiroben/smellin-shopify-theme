@@ -1,0 +1,4 @@
+development:
+  password: storepassword
+  theme_id: "themeid"
+  store: store url

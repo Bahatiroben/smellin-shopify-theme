@@ -1,0 +1,29 @@
+{%for col in collections %}
+  <h3>{{col.title}}</h3>
+  <div>{{col.description}}</div>
+  <ul>
+  {%for product in col.products%}
+  <li>
+    <a href={{product.url}}>
+      {{product.title}} at {{product.price | money}}
+      <img src="{{section.settings.product_image | img_url: "medium"}}"/>
+      {%unless product.available%}
+    <span style="color: {{settings.color_id}}">SOLD OUT</span>
+      {%endunless%}
+    </a>
+  </li>
+  {%endfor%}
+</ul>
+{%endfor%}
+
+{%schema%}
+{
+  "name": "title color",
+  "settings": [
+  {
+    "label": "Image Picker",
+    "type": "image_picker",
+    "id": "product_image"
+  }]
+}
+{%endschema%}

@@ -1,0 +1,11 @@
+// put your styles here
+$secondary-color: #E69E6C;
+$primary-color: #FFFFFF;
+$terciary-color: #736561;
+.secondary-back-ground {
+    background: $secondary-color;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
