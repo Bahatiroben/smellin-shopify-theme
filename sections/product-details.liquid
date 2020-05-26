@@ -1,0 +1,108 @@
+<div class="product-details-container" style="color: {{settings.primary_color}}">
+    <h4 style="color: {{settings.secondary_color}}">{{product.title | upcase}}</h4>
+    <div>
+        <span class="ratings" style="color: {{settings.secondary_color}}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M6 9l-3.53 1.85.68-3.92L.29 4.15l3.95-.58L6 0l1.76 3.57 3.95.58-2.86 2.78.68 3.92z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M6 9l-3.53 1.85.68-3.92L.29 4.15l3.95-.58L6 0l1.76 3.57 3.95.58-2.86 2.78.68 3.92z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M6 9l-3.53 1.85.68-3.92L.29 4.15l3.95-.58L6 0l1.76 3.57 3.95.58-2.86 2.78.68 3.92z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M6 9l-3.53 1.85.68-3.92L.29 4.15l3.95-.58L6 0l1.76 3.57 3.95.58-2.86 2.78.68 3.92z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="currentColor" fill-rule="evenodd" d="M6 9l-3.53 1.85.68-3.92L.29 4.15l3.95-.58L6 0l1.76 3.57 3.95.58-2.86 2.78.68 3.92z"></path></svg>
+        </span> 
+        <span>1725 Reviews</span>
+    </div>
+    <h2 style="color: {{settings.terciary_color}}">{{section.settings.title2}}</h2>
+    <div>{{product.description}}</div>
+    <div style="color: {{settings.secondary_color}}">{{product.price | money_with_currency}}</div>
+    <div>
+        <button style="border: 1px solid {{settings.secondary_color}}; color: {{settings.quad_color}}; background-color: {{settings.secondary_color}}" class="add-to-cart-main-button">Add to cart</button>
+    </div>
+<div style="color:{{settings.secondary_color}}" class="add-products-details">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="mr-2" style="width: 26px; height: 26px;"><path fill="#C5B9AC" fill-rule="evenodd" d="M13 26C5.82 26 0 20.18 0 13S5.82 0 13 0s13 5.82 13 13-5.82 13-13 13zM7 13.817h4.896v4.919h1.92v-4.92h4.897V11.93h-4.896V7h-1.92v4.93H7v1.887z"></path></svg>
+        <span onClick="setColor({{settings.secondary_color}})"> All Product Details</span>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Product Details",
+        "settings": [
+        {
+            "label": "Product title",
+            "id": "title",
+            "type": "text"
+        },
+        {
+            "label": "Product showcase",
+            "id": "title2",
+            "type": "text"
+        },
+        {
+            "label": "Product description",
+            "id": "product_description",
+            "type": "textarea"   
+        }
+        ]
+    }
+{% endschema %}
+
+{% stylesheet %}
+
+.product-details-container {
+ 
+}
+
+h4, h2, div {
+    display: inline-block;
+    clear:both;
+    float:left
+}
+
+div {
+    width: 75%;
+}
+
+svg{
+    width: 17px;
+    height: 17px;
+}
+
+h2 {
+    font-family: bookmania,Bookmania,Bookman,Georgia,Times,serif;
+}
+
+.add-to-cart-main-button {
+    width: 300px;
+    height: 55px;
+    display: block;
+    border-radius: 5px;
+    opacity: 1;
+    transition: filter .2s ease-in-out;
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    outline: none
+
+}
+
+.add-to-cart-main-button:hover {
+    filter: saturate(140%) contrast(90%);
+}
+
+.add-products-details>svg {
+    position: relative;
+    top: 2px;
+}
+
+.add-products-details {
+    cursor: pointer;
+}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+function setColor(color) {
+    console.log(color)
+}
+{% endjavascript %}

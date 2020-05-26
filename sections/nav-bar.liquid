@@ -26,8 +26,9 @@
         <svg style="color:{{terciarycolor}}" class="cart-icon nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 25"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"><path d="M1 23.84h16.85V9H1z"></path><path d="M13.81 9.31c0-4.59-2.2-8.31-4.9-8.31C6.2 1 4 4.72 4 9.31M13 9v14.84"></path></g></svg>
         </div> 
 </div>
-<div>{{scroll}}</div>
-<div style="height: 200vh"></div>
+<div class="separator">
+
+</div>
 
 {% schema %}
 {
@@ -118,6 +119,10 @@
      background: white !important;
      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.03) !important;
      transition: background .3s ease-in-out, box-shadow .3s ease-in-out !important;
+ }
+
+ .separator {
+     height: 200px;
  }
 
 {% endstylesheet %}

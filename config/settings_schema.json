@@ -20,7 +20,7 @@
         "label": "Text Color",
         "id": "primary_color",
         "type": "color",
-        "default": "#FFFFFF"
+        "default": "#AAA8B1"
     },
     {
         "label": "Background Color",
@@ -33,6 +33,12 @@
       "id": "terciary_color",
       "type": "color",
       "default": "#736561"
+    },
+    {
+      "label": "Fourth Color",
+      "id": "quad_color",
+      "type": "color",
+      "default": "#F3F2FA"
     }
     ]
   }

@@ -1,6 +1,6 @@
 // put your styles here
 $secondary-color: #E69E6C;
-$primary-color: #FFFFFF;
+$primary-color: #AAA8B1;
 $terciary-color: #736561;
 .secondary-back-ground {
     background: $secondary-color;
@@ -8,4 +8,9 @@ $terciary-color: #736561;
 
 *, :after, :before {
     box-sizing: border-box;
+}
+
+body {
+    background: #FCF8EF;
+    font-family: L Brown Regular Web,Brown,Helvetica,Arial,sans-serif;
 }
